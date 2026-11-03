@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 200" width="100%" height="100%">
+    <!-- RIHLE ARCHIVE - Vektörel Resmi Logo -->
+    <defs>
+        <style>
+            .arch-line {
+                fill: none;
+                stroke: #251e19;
+                stroke-width: 7;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+            .arch-base {
+                stroke: #251e19;
+                stroke-width: 8;
+                stroke-linecap: square;
+            }
+            .terracotta-pillar {
+                fill: #b85d38;
+            }
+            .brand-text-rihle {
+                font-family: 'Playfair Display', 'Cinzel', 'Georgia', serif;
+                font-size: 88px;
+                font-weight: 700;
+                fill: #251e19;
+            }
+            .brand-text-archive {
+                font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+                font-size: 26px;
+                font-weight: 600;
+                letter-spacing: 0.36em;
+                fill: #8a7160;
+                text-transform: uppercase;
+            }
+        </style>
+    </defs>
+
+    <!-- Kemer İkonu (Sol Taraf) -->
+    <g transform="translate(10, 0)">
+        <!-- Taban Çizgisi -->
+        <line x1="16" y1="172" x2="148" y2="172" class="arch-base" />
+        
+        <!-- Dış Kemer -->
+        <path d="M 26 172 L 26 95 C 26 56, 56 32, 82 25 C 108 32, 138 56, 138 95 L 138 172" class="arch-line" />
+        
+        <!-- İç Kemer -->
+        <path d="M 46 172 L 46 100 C 46 72, 66 54, 82 48 C 98 54, 118 72, 118 100 L 118 172" class="arch-line" />
+        
+        <!-- Merkezi Kiremit Sütun (Terracotta Obelisk) -->
+        <polygon points="69,172 95,172 87,70 82,62 77,70" class="terracotta-pillar" />
+    </g>
+
+    <!-- Marka Tipografisi (Sağ Taraf) -->
+    <g transform="translate(195, 0)">
+        <!-- Rihle Başlığı -->
+        <text x="0" y="118" class="brand-text-rihle">Rihle</text>
+        
+        <!-- ARCHIVE Alt Başlığı -->
+        <text x="3" y="168" class="brand-text-archive">ARCHIVE</text>
+    </g>
+</svg>
+
