@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="description" content="Rihle Archive - Tarihin İz Bırakan Seyyahları, Biyografiler, Seyahatnameler ve Rotalar.">
+    <title>Biyografiler | Rihle Archive</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/images/rihle-icon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span class="date-badge" id="currentDateDisplay"><i class="bi bi-calendar-event me-1"></i> Yükleniyor...</span>
+                <span class="d-none d-md-inline text-white-50">|</span>
+                <span class="d-none d-md-inline text-white-50 fst-italic">“Yeryüzünde dolaşın da bakın...”</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <div class="social-links-top">
+                    <a href="https://twitter.com" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+                    <a href="https://spotify.com" target="_blank" rel="noopener"><i class="bi bi-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR (Sabit ve Opak - Hover ile Açılan Menü) -->
+    <nav class="navbar navbar-expand-lg navbar-rihle sticky-top">
+        <div class="container">
+            <a class="brand-wrapper" href="index.html">
+                <img src="assets/images/rihle-icon.svg" alt="Rihle Archive" class="brand-logo-img">
+                <div class="brand-text-block">
+                    <span class="brand-title">Rihle</span>
+                    <span class="brand-subtitle">A R C H I V E</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRihleContent">
+                <i class="bi bi-list fs-2 text-primary"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarRihleContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="yazilar.html">Yazılar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarCategoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Kategoriler <i class="bi bi-chevron-down ms-1 dropdown-chevron"></i>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarCategoriesDropdown">
+                            <li><a class="dropdown-item py-2 active" href="biyografiler.html"><i class="bi bi-person-lines-fill me-2 text-terracotta"></i> Biyografiler</a></li>
+                            <li><a class="dropdown-item py-2" href="podcast.html"><i class="bi bi-mic me-2 text-terracotta"></i> Podcast</a></li>
+                            <li><a class="dropdown-item py-2" href="kitap-onerileri.html"><i class="bi bi-book me-2 text-terracotta"></i> Kitap Önerileri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button type="button" class="btn-nav-search" data-bs-toggle="modal" data-bs-target="#searchArchiveModal" title="Arşivde Ara">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SAYFA BAŞLIĞI / BANNER - Biyografiler ve Doğrudan Breadcrumb -->
+    <header class="py-5 bg-parchment-soft border-bottom">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb small">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Biyografiler</li>
+                </ol>
+            </nav>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="section-eyebrow">Seyahatnameler & Coğrafya Arşivi</span>
+                    <h1 class="display-5 fw-bold mb-3 font-serif">Biyografiler</h1>
+                    <p class="lead text-muted">
+                        Kıtaları aşan, şehirlerin ruhunu kaydeden ve medeniyetleri birbirine bağlayan kadim seyyahların, coğrafyacıların ve ilim yolcularının hayat hikâyeleri, rotaları ve kaleme aldıkları eserler.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="p-3 bg-card border rounded text-start d-inline-block">
+                        <div class="small text-muted"><i class="bi bi-compass text-terracotta me-1"></i> Kayıtlı Biyografi Sayısı</div>
+                        <div class="fs-4 fw-bold font-serif">24 Biyografi & Rota</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ANA İÇERİK: BİYOGRAFİLER / SEYYAHLAR FİLTRELER VE KARTLAR -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Filtreler -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+                <div class="filter-btn-group mb-0">
+                    <button type="button" class="filter-btn active" data-filter="all">Tüm Biyografiler</button>
+                    <button type="button" class="filter-btn" data-filter="islam-dogu">İslam Dünyası & Doğu</button>
+                    <button type="button" class="filter-btn" data-filter="osmanli">Osmanlı Seyyahları</button>
+                    <button type="button" class="filter-btn" data-filter="denizci">Denizciler & Haritacılar</button>
+                    <button type="button" class="filter-btn" data-filter="dogu-ipekyolu">İpek Yolu & Uzak Doğu</button>
+                </div>
+            </div>
+
+            <!-- Seyyah Kartları Grid -->
+            <div class="row g-4" id="seyyahGrid">
+                <!-- 1. İbn Battuta -->
+                <div class="col-md-6 col-lg-4 seyyah-item-col" data-category="islam-dogu">
+                    <div class="seyyah-card">
+                        <div class="seyyah-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" alt="İbn Battûta" class="seyyah-img">
+                            <span class="seyyah-century-badge">14. Yüzyıl</span>
+                        </div>
+                        <div class="seyyah-body">
+                            <div class="seyyah-route-preview"><i class="bi bi-geo-alt-fill"></i> Tanca &bull; Hicaz &bull; Anadolu &bull; Hindistan &bull; Çin</div>
+                            <h3 class="seyyah-name">İbn Battûta</h3>
+                            <p class="seyyah-excerpt">30 yıllık yolculuğunda 120 bin kilometre yol katetti; İslam medeniyeti havzasını ve Asya saraylarını kaleme aldı.</p>
+                            <div class="seyyah-meta-footer">
+                                <span class="small text-muted"><i class="bi bi-journal-text me-1"></i> Tuhfetü’n-Nuzzâr</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-seyyah-detail" data-id="ibn-battuta">İncele &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Evliya Çelebi -->
+                <div class="col-md-6 col-lg-4 seyyah-item-col" data-category="osmanli">
+                    <div class="seyyah-card">
+                        <div class="seyyah-img-wrap">
+                            <img src="assets/images/evliya-celebi.jpg" alt="Evliyâ Çelebi" class="seyyah-img">
+                            <span class="seyyah-century-badge">17. Yüzyıl</span>
+                        </div>
+                        <div class="seyyah-body">
+                            <div class="seyyah-route-preview"><i class="bi bi-geo-alt-fill"></i> İstanbul &bull; Anadolu &bull; Balkanlar &bull; Mısır</div>
+                            <h3 class="seyyah-name">Evliyâ Çelebi</h3>
+                            <p class="seyyah-excerpt">Osmanlı coğrafyasını 50 yıl boyunca karış karış gezerek 10 ciltlik eşsiz bir dünya şaheseri armağan etti.</p>
+                            <div class="seyyah-meta-footer">
+                                <span class="small text-muted"><i class="bi bi-journal-text me-1"></i> Seyahatnâme (10 Cilt)</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-seyyah-detail" data-id="evliya-celebi">İncele &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Piri Reis -->
+                <div class="col-md-6 col-lg-4 seyyah-item-col" data-category="denizci">
+                    <div class="seyyah-card">
+                        <div class="seyyah-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?auto=format&fit=crop&w=800&q=80" alt="Pîrî Reis" class="seyyah-img">
+                            <span class="seyyah-century-badge">16. Yüzyıl</span>
+                        </div>
+                        <div class="seyyah-body">
+                            <div class="seyyah-route-preview"><i class="bi bi-geo-alt-fill"></i> Akdeniz Limanları &bull; Atlas Okyanusu</div>
+                            <h3 class="seyyah-name">Pîrî Reis</h3>
+                            <p class="seyyah-excerpt">1513 tarihli dünya haritası ve Akdeniz kılavuzu Kitâb-ı Bahriye ile dünya denizcilik mirasının zirvesi.</p>
+                            <div class="seyyah-meta-footer">
+                                <span class="small text-muted"><i class="bi bi-journal-text me-1"></i> Kitâb-ı Bahriye</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-seyyah-detail" data-id="piri-reis">İncele &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Katip Çelebi -->
+                <div class="col-md-6 col-lg-4 seyyah-item-col" data-category="osmanli">
+                    <div class="seyyah-card">
+                        <div class="seyyah-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=800&q=80" alt="Kâtib Çelebi" class="seyyah-img">
+                            <span class="seyyah-century-badge">17. Yüzyıl</span>
+                        </div>
+                        <div class="seyyah-body">
+                            <div class="seyyah-route-preview"><i class="bi bi-geo-alt-fill"></i> Doğu Seferleri &bull; Bağdat &bull; Kütüphaneler</div>
+                            <h3 class="seyyah-name">Kâtib Çelebi</h3>
+                            <p class="seyyah-excerpt">Cihannümâ ile İslam coğrafyasıyla Batı atlaslarını meczederek modern Osmanlı coğrafya ilminin öncüsü oldu.</p>
+                            <div class="seyyah-meta-footer">
+                                <span class="small text-muted"><i class="bi bi-journal-text me-1"></i> Cihannümâ</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-seyyah-detail" data-id="katip-celebi">İncele &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. İbn Fadlan -->
+                <div class="col-md-6 col-lg-4 seyyah-item-col" data-category="islam-dogu">
+                    <div class="seyyah-card">
+                        <div class="seyyah-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="İbn Fadlân" class="seyyah-img">
+                            <span class="seyyah-century-badge">10. Yüzyıl</span>
+                        </div>
+                        <div class="seyyah-body">
+                            <div class="seyyah-route-preview"><i class="bi bi-geo-alt-fill"></i> Bağdat &bull; Harezm &bull; Volga Bulgarları</div>
+                            <h3 class="seyyah-name">İbn Fadlân</h3>
+                            <p class="seyyah-excerpt">Bağdat’tan İtil kıyılarına uzanan yolculuğunda Vikingler ve Türk kavimleri hakkında ilk kayıtları tuttu.</p>
+                            <div class="seyyah-meta-footer">
+                                <span class="small text-muted"><i class="bi bi-journal-text me-1"></i> Risâle</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-seyyah-detail" data-id="ibn-fadlan">İncele &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Marco Polo -->
+                <div class="col-md-6 col-lg-4 seyyah-item-col" data-category="dogu-ipekyolu">
+                    <div class="seyyah-card">
+                        <div class="seyyah-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1508672019048-805b876b67e2?auto=format&fit=crop&w=800&q=80" alt="Marco Polo" class="seyyah-img">
+                            <span class="seyyah-century-badge">13. Yüzyıl</span>
+                        </div>
+                        <div class="seyyah-body">
+                            <div class="seyyah-route-preview"><i class="bi bi-geo-alt-fill"></i> Venedik &bull; İpek Yolu &bull; Moğol Sarayı</div>
+                            <h3 class="seyyah-name">Marco Polo</h3>
+                            <p class="seyyah-excerpt">İpek Yolu boyunca 24 yıl süren yolculuğunun ardından Batı dünyasına Çin sarayının ihtişamını anlattı.</p>
+                            <div class="seyyah-meta-footer">
+                                <span class="small text-muted"><i class="bi bi-journal-text me-1"></i> İl Milione</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-seyyah-detail" data-id="marco-polo">İncele &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. El-Mesudi -->
+                <div class="col-md-6 col-lg-4 seyyah-item-col" data-category="islam-dogu">
+                    <div class="seyyah-card">
+                        <div class="seyyah-img-wrap">
+                            <img src="assets/images/el-mesudi.jpg" alt="El-Mes‘ûdî" class="seyyah-img" style="object-position: center 20%;">
+                            <span class="seyyah-century-badge">10. Yüzyıl</span>
+                        </div>
+                        <div class="seyyah-body">
+                            <div class="seyyah-route-preview"><i class="bi bi-geo-alt-fill"></i> Bağdat &bull; İran &bull; Hindistan &bull; Hazar &bull; Mısır</div>
+                            <h3 class="seyyah-name">El-Mes‘ûdî</h3>
+                            <p class="seyyah-excerpt">“İslam’ın Herodot’u”. 4 ciltlik “Altın Bozkırlar ve Mücevher Madenleri” eseriyle kadim milletleri kaydetti.</p>
+                            <div class="seyyah-meta-footer">
+                                <span class="small text-muted"><i class="bi bi-journal-text me-1"></i> Mürûcü’z-Zeheb (4 Cilt)</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-seyyah-detail" data-id="el-mesudi">İncele &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bilgi Kutusu -->
+            <div class="mt-5 p-4 rounded bg-parchment-soft border d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+                <div>
+                    <h5 class="fw-bold mb-1"><i class="bi bi-journal-bookmark-fill text-terracotta me-2"></i> Yeni Bir Biyografi Önerin</h5>
+                    <p class="text-muted small mb-0">Arşivimizde yer almasını istediğiniz seyyah ve seyahatname metinlerini bizimle paylaşın.</p>
+                </div>
+                <a href="iletisim.html" class="btn btn-rihle btn-sm flex-shrink-0">
+                    Öneri Gönder <i class="bi bi-send-fill ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- SEYYAH DETAY MODALI -->
+    <div class="modal fade" id="travelerDetailModal" tabindex="-1" aria-labelledby="modalTravelerName" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-bottom">
+                    <div>
+                        <span class="badge bg-secondary mb-1" id="modalTravelerPeriod">Dönem</span>
+                        <h4 class="modal-title font-serif" id="modalTravelerName">Seyyah Adı</h4>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4">
+                        <div class="col-md-5">
+                            <img src="" id="modalTravelerImg" alt="Seyyah" class="img-fluid rounded shadow-sm w-100 mb-3" style="height: 260px; object-fit: cover; object-position: center 20%;">
+                            <div class="p-3 bg-parchment-soft rounded small">
+                                <div><strong><i class="bi bi-geo-alt text-terracotta me-1"></i> Doğum / Çıkış:</strong> <span id="modalTravelerOrigin">-</span></div>
+                                <div class="mt-2"><strong><i class="bi bi-signpost-split text-terracotta me-1"></i> Toplam Menzil:</strong> <span id="modalTravelerDist">-</span></div>
+                                <div class="mt-2"><strong><i class="bi bi-book text-terracotta me-1"></i> Başlıca Eser:</strong> <span id="modalTravelerWork">-</span></div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="h6 text-uppercase fw-bold text-terracotta mb-2">Seyahat Güzergahı</h5>
+                            <div class="p-2 mb-3 rounded small modal-route-box" id="modalTravelerRoute"></div>
+                            
+                            <h5 class="h6 text-uppercase fw-bold text-terracotta mb-2">Biyografi ve Önemi</h5>
+                            <p class="text-muted small" id="modalTravelerBio"></p>
+
+                            <div class="p-3 border-start border-3 border-warning bg-parchment-soft rounded fst-italic small" id="modalTravelerQuote"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-top">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HIZLI ARAMA MODALI -->
+    <div class="modal fade search-modal" id="searchArchiveModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="search-input-wrap">
+                    <i class="bi bi-search fs-4 text-terracotta"></i>
+                    <input type="text" id="archiveSearchInput" class="search-input-field" placeholder="Arşivde ara...">
+                </div>
+                <div class="search-results-list" id="archiveSearchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

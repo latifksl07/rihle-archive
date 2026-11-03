@@ -1,0 +1,12 @@
+# İşletim sistemi kalıntıları
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editör ayarları
+.vscode/
+.idea/
+
+# Günlük dosyaları
+*.log
+

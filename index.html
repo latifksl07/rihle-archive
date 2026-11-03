@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="description" content="Rihle Archive - Seyyahların izinde, tarihin derinliklerine açılan dijital kültür ve seyahat arşivi.">
+    <meta name="keywords" content="Rihle Archive, Seyyahlar, İbn Battuta, Evliya Çelebi, Seyahatname, Coğrafya, Podcast, Kitap Önerileri">
+    <title>Rihle Archive | Seyyahların İzinde Tarih ve Kültür Portalı</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/rihle-icon.svg">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Özel Tema CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="home">
+
+    <!-- 1. ÜST BİLGİ VE SOSYAL MEDYA ÇUBUĞU (TOP BAR) -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span class="date-badge" id="currentDateDisplay">
+                    <i class="bi bi-calendar-event me-1"></i> Yükleniyor...
+                </span>
+                <span class="d-none d-md-inline text-white-50">|</span>
+                <span class="d-none d-md-inline text-white-50 fst-italic">“Yeryüzünde dolaşın da bakın...”</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="d-none d-sm-inline text-white-50 me-1">Bizi Takip Edin:</span>
+                <div class="social-links-top">
+                    <a href="https://twitter.com" target="_blank" rel="noopener" title="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="https://spotify.com" target="_blank" rel="noopener" title="Spotify"><i class="bi bi-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. ANA NAVBAR (NAVİGASYON) - Opak ve Üstte Sabit -->
+    <nav class="navbar navbar-expand-lg navbar-rihle sticky-top">
+        <div class="container">
+            <!-- Marka ve Logo -->
+            <a class="brand-wrapper" href="index.html">
+                <img src="assets/images/rihle-icon.svg" alt="Rihle Archive Logo" class="brand-logo-img">
+                <div class="brand-text-block">
+                    <span class="brand-title">Rihle</span>
+                    <span class="brand-subtitle">A R C H I V E</span>
+                </div>
+            </a>
+
+            <!-- Mobil Menü Açma Butonu -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRihleContent" aria-controls="navbarRihleContent" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
+                <i class="bi bi-list fs-2 text-primary"></i>
+            </button>
+
+            <!-- Menü Öğeleri: Ana Sayfa, Yazılar, Kategoriler, Hakkımızda, İletişim -->
+            <div class="collapse navbar-collapse" id="navbarRihleContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="yazilar.html">Yazılar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarCategoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Kategoriler <i class="bi bi-chevron-down ms-1 dropdown-chevron"></i>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarCategoriesDropdown">
+                            <li>
+                                <a class="dropdown-item py-2" href="biyografiler.html">
+                                    <i class="bi bi-person-lines-fill me-2 text-terracotta"></i> Biyografiler
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item py-2" href="podcast.html">
+                                    <i class="bi bi-mic me-2 text-terracotta"></i> Podcast
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item py-2" href="kitap-onerileri.html">
+                                    <i class="bi bi-book me-2 text-terracotta"></i> Kitap Önerileri
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+
+                <!-- Hızlı İşlemler (Arama ve Keşfet Butonu) -->
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button type="button" class="btn-nav-search" data-bs-toggle="modal" data-bs-target="#searchArchiveModal" title="Arşivde Ara (Ctrl+K)">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <a href="biyografiler.html" class="btn btn-rihle btn-sm ms-1 d-none d-xl-inline-flex">
+                        <i class="bi bi-compass"></i> Rotaları Keşfet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. GÜNÜN RİHLE ALINTISI (TICKER) -->
+    <div class="ticker-bar">
+        <div class="container d-flex align-items-center gap-3">
+            <span class="ticker-badge flex-shrink-0">
+                <i class="bi bi-stars"></i> Günün Seyyahı
+            </span>
+            <div class="ticker-quote text-truncate" id="dailyQuoteDisplay">
+                <strong>İbn Battûta:</strong> “Türkler iyi karakterli, kuvvetli ve cesur insanlardır.”
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. HERO / MANŞET BÖLÜMÜ -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Sol Büyük Manşet -->
+                <div class="col-lg-8">
+                    <div class="hero-main-card" style="background-image: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80');">
+                        <div class="hero-content">
+                            <span class="category-tag">Öne Çıkan Dosya</span>
+                            <h1 class="display-6 fw-bold text-white mb-2">Tanca’dan Çin Seddi’ne 30 Yıl: İbn Battûta’nın Adımlarında İslam Coğrafyası</h1>
+                            <p class="text-white-50 d-none d-md-block mb-3">14. yüzyılda 120 bin kilometrelik güzergahta bilinen dünyanın neredeyse tamamını kateden seyyahın menzilleri, karşılaştığı hükümdarlar ve yazdığı abidevi seyahatname.</p>
+                            <div class="d-flex align-items-center gap-3 text-white-50 small">
+                                <span><i class="bi bi-calendar3 me-1"></i> Ekim 2026</span>
+                                <span>&bull;</span>
+                                <span><i class="bi bi-clock me-1"></i> 8 dk okuma</span>
+                                <span>&bull;</span>
+                                <a href="seyyahlar.html" class="text-white fw-bold text-decoration-underline">İncele &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ İki Küçük Manşet -->
+                <div class="col-lg-4 d-flex flex-column gap-4">
+                    <a href="seyyahlar.html" class="hero-sub-card text-decoration-none" style="background-image: url('assets/images/evliya-celebi.jpg');">
+                        <div class="hero-content">
+                            <span class="category-tag tag-accent">Evliyâ Çelebi</span>
+                            <h4 class="text-white fw-bold mb-1">“Seyahat yâ Resûlallah!”</h4>
+                            <p class="text-white-50 small mb-0">Rüyasında başlayan 50 yıllık serüven ve 10 ciltlik eşsiz Osmanlı panoraması.</p>
+                        </div>
+                    </a>
+
+                    <a href="seyyahlar.html" class="hero-sub-card text-decoration-none" style="background-image: url('https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?auto=format&fit=crop&w=800&q=80');">
+                        <div class="hero-content">
+                            <span class="category-tag">Denizler ve Haritalar</span>
+                            <h4 class="text-white fw-bold mb-1">Pîrî Reis ve Akdeniz Sırları</h4>
+                            <p class="text-white-50 small mb-0">Kitâb-ı Bahriye'de anlatılan limanlar, sığlıklar ve 1513 dünya haritası.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 5. REKLAM ALANI (Bu Alana Reklam Verebilirsiniz) -->
+    <section class="container ad-banner-zone">
+        <a href="iletisim.html" class="text-decoration-none d-block">
+            <div class="ad-banner-box">
+                <div class="ad-banner-content">
+                    <span class="ad-badge">SPONSOR &bull; REKLAM</span>
+                    <h3 class="ad-text">Bu Alana Reklam Verebilirsiniz</h3>
+                    <p class="ad-subtext mb-0">
+                        Kültür, tarih ve edebiyat odaklı kitlemize ulaşmak için: <strong>iletisim.rihlearchive@gmail.com</strong>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- 6. KATEGORİLER BÖLÜMÜ (Resimdeki Tasarıma Uygun Yeni Görünüm) -->
+    <section class="py-5" id="kategoriler">
+        <div class="container">
+            <!-- Kategoriler Başlık Çubuğu (İkon + Başlık + Sağ Yatay Çizgi) -->
+            <div class="categories-header-bar">
+                <div class="categories-header-title">
+                    <i class="bi bi-grid-fill categories-header-icon"></i>
+                    <span>Kategoriler</span>
+                </div>
+                <div class="categories-header-line"></div>
+            </div>
+
+            <!-- Alt Kategori Butonları / Sekmeleri (Biyografiler, Podcast, Kitap Önerileri) -->
+            <ul class="nav category-tabs-nav" id="categoryTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="cat-tab-btn active" id="tab-biyografiler-btn" data-bs-toggle="tab" data-bs-target="#tab-biyografiler" type="button" role="tab" aria-controls="tab-biyografiler" aria-selected="true">
+                        Biyografiler
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="cat-tab-btn" id="tab-podcast-btn" data-bs-toggle="tab" data-bs-target="#tab-podcast" type="button" role="tab" aria-controls="tab-podcast" aria-selected="false">
+                        Podcast
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="cat-tab-btn" id="tab-kitap-btn" data-bs-toggle="tab" data-bs-target="#tab-kitap" type="button" role="tab" aria-controls="tab-kitap" aria-selected="false">
+                        Kitap Önerileri
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Sekme İçerikleri (2 Kolonlu Kart Gridleri) -->
+            <div class="tab-content" id="categoryTabContent">
+                
+                <!-- 1. SEKME: BİYOGRAFİLER -->
+                <div class="tab-pane fade show active" id="tab-biyografiler" role="tabpanel" aria-labelledby="tab-biyografiler-btn">
+                    <div class="row g-3 g-md-4">
+                        <!-- Kart 1 -->
+                        <div class="col-lg-6">
+                            <a href="biyografiler.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=400&q=80" alt="İbn Battûta">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">İbn Battûta: Tanca’dan Çin Seddi’ne 30 Yıllık Seyahat</h3>
+                                    <p class="category-news-desc">120 bin kilometrelik güzergahta bilinen dünyanın neredeyse tamamını kateden seyyahın menzilleri ve seyahatnamesi.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>12 Ağustos 2026</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Kart 2 -->
+                        <div class="col-lg-6">
+                            <a href="biyografiler.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="assets/images/evliya-celebi.jpg" alt="Evliyâ Çelebi">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">Evliyâ Çelebi: “Seyahat yâ Resûlallah!” ve 10 Ciltlik Dünya</h3>
+                                    <p class="category-news-desc">Rüyasında başlayan 50 yıllık serüven, 7 iklim 18 padişahlık ve 17. yüzyılın en büyük Türkçe panoraması.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>25 Mayıs 2026</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Kart 3 -->
+                        <div class="col-lg-6">
+                            <a href="biyografiler.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?auto=format&fit=crop&w=400&q=80" alt="Pîrî Reis">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">Pîrî Reis: Kitâb-ı Bahriye ve 1513 Dünya Haritası</h3>
+                                    <p class="category-news-desc">Akdeniz kıyılarındaki tüm limanları, sığlıkları ve rüzgârları haritalayan büyük Osmanlı denizcisi.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>24 Kasım 2022</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Kart 4 -->
+                        <div class="col-lg-6">
+                            <a href="biyografiler.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=400&q=80" alt="Kâtib Çelebi">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">Kâtib Çelebi: Cihannümâ ile Doğu ve Batı Coğrafyası</h3>
+                                    <p class="category-news-desc">Batı atlaslarını Osmanlı ilmiyle buluşturan ve modern coğrafyacılığın temellerini atan ansiklopedist.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>21 Ağustos 2022</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Kart 5 -->
+                        <div class="col-lg-6">
+                            <a href="biyografiler.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=400&q=80" alt="İbn Fadlân">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">İbn Fadlân: İtil Bulgarları ve Kuzey Bozkırları Seferi</h3>
+                                    <p class="category-news-desc">Bağdat’tan İtil kıyılarına uzanan tehlikeli elçilik yolculuğu ve erken dönem Türk boylarının eşsiz tasvirleri.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>03 Temmuz 2022</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Kart 6 -->
+                        <div class="col-lg-6">
+                            <a href="biyografiler.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="https://images.unsplash.com/photo-1508672019048-805b876b67e2?auto=format&fit=crop&w=400&q=80" alt="Marco Polo">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">Marco Polo: Venedik’ten Hanbalık Saraylarına İpek Yolu</h3>
+                                    <p class="category-news-desc">24 yıllık Doğu serüveninde Kubilay Han’ın sarayında görev yapan ve Asya'yı Batı'ya tanıtan gezgin.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>22 Haziran 2022</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Kart 7 -->
+                        <div class="col-lg-6">
+                            <a href="biyografiler.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="assets/images/el-mesudi.jpg" alt="El-Mes‘ûdî" style="object-position: center 20%;">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">El-Mes‘ûdî: İslam’ın Herodot’u ve Altın Bozkırlar</h3>
+                                    <p class="category-news-desc">4 ciltlik abidevi eseri “Altın Bozkırlar ve Mücevher Madenleri” (Mürûcü’z-Zeheb) ile kadim dünya coğrafyası ve halkları.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>10. Yüzyıl &bull; Mürûcü’z-Zeheb (4 Cilt)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <a href="biyografiler.html" class="btn btn-sm btn-rihle-outline">
+                            Tüm Biyografileri İncele <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. SEKME: PODCAST -->
+                <div class="tab-pane fade" id="tab-podcast" role="tabpanel" aria-labelledby="tab-podcast-btn">
+                    <div class="row g-3 g-md-4">
+                        <!-- Podcast 1 -->
+                        <div class="col-lg-6">
+                            <a href="podcast.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=400&q=80" alt="İbn Battûta Podcast">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">İbn Battûta'nın 30 Yıllık Yolculuğu: Tanca'dan Çin'e</h3>
+                                    <p class="category-news-desc">Prof. Dr. Ahmet Şimşirgil ile 120 bin kilometrelik dünya serüveninin satır araları ve bilinmeyen menziller.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>24 Ekim 2026 &bull; 42 dk</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Podcast 2 -->
+                        <div class="col-lg-6">
+                            <a href="podcast.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="assets/images/evliya-celebi.jpg" alt="Evliyâ Çelebi Podcast">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">Evliyâ Çelebi'nin Gözünden 17. Yüzyıl İstanbul'u</h3>
+                                    <p class="category-news-desc">Kahvehaneler, esnaf alayları, boza dükkanları ve Evliyâ'nın mizah dolu üslubuyla Osmanlı gündelik hayatı.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>17 Ekim 2026 &bull; 38 dk</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Podcast 3 -->
+                        <div class="col-lg-6">
+                            <a href="podcast.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?auto=format&fit=crop&w=400&q=80" alt="Pîrî Reis Podcast">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">Kitâb-ı Bahriye: Pîrî Reis'in Akdeniz Sırları</h3>
+                                    <p class="category-news-desc">Prof. Dr. İdris Bostan ile 1513 Haritası nasıl çizildi? Akdeniz topoğrafyası ve Osmanlı korsan denizciliği.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>10 Ekim 2026 &bull; 45 dk</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Podcast 4 -->
+                        <div class="col-lg-6">
+                            <a href="podcast.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="https://images.unsplash.com/photo-1508672019048-805b876b67e2?auto=format&fit=crop&w=400&q=80" alt="İpek Yolu Podcast">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">İpek Yolu Kervanlarının Bilinmeyen Günlükleri</h3>
+                                    <p class="category-news-desc">Kervansaray teşkilatı, tüccarların yol güvenliği ve çölleri aşan kervanların günlük konaklama ritüelleri.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>03 Ekim 2026 &bull; 34 dk</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Podcast 5 -->
+                        <div class="col-lg-6">
+                            <a href="podcast.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=400&q=80" alt="Kâtib Çelebi Podcast">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">Kâtib Çelebi ve Cihannümâ: Coğrafyanın Pusulası</h3>
+                                    <p class="category-news-desc">Doğu ve Batı haritalarının buluşması, coğrafya felsefesi ve Osmanlı kütüphanelerindeki ilim mirası.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>26 Eylül 2026 &bull; 40 dk</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Podcast 6 -->
+                        <div class="col-lg-6">
+                            <a href="podcast.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="https://images.unsplash.com/photo-1580824456170-c51ef67be9d2?auto=format&fit=crop&w=400&q=80" alt="Kadim İlim Rotaları Podcast">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">Endülüs’ten Semerkant’a: Kadim İlim Rotaları</h3>
+                                    <p class="category-news-desc">Medreseler arası ilim seyahatleri, el yazması kitapların nakli ve İslam dünyasının kadim kütüphane yolculukları.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-clock"></i>
+                                        <span>19 Eylül 2026 &bull; 36 dk</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <a href="podcast.html" class="btn btn-sm btn-rihle-outline">
+                            Tüm Bölümleri Dinle <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. SEKME: KİTAP ÖNERİLERİ -->
+                <div class="tab-pane fade" id="tab-kitap" role="tabpanel" aria-labelledby="tab-kitap-btn">
+                    <div class="row g-3 g-md-4">
+                        <!-- Kitap 1 -->
+                        <div class="col-lg-6">
+                            <a href="kitap-onerileri.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="assets/images/evliya-celebi-seyahatnamesi-bilge.jpg" alt="Evliya Çelebi Seyahatnâmesi">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">Evliya Çelebi Seyahatnâmesi (Kısaltılmış Basım)</h3>
+                                    <p class="category-news-desc">Sadeleştiren: Dr. Mümin Çevik. 17. yüzyıl Osmanlı coğrafyasının en büyük sözlü ve yazılı anıtı.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-book"></i>
+                                        <span>Bilge Kültür Sanat</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Kitap 2 -->
+                        <div class="col-lg-6">
+                            <a href="kitap-onerileri.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="assets/images/ibn-battuta-seyahatnamesi-yky.jpg" alt="İbn Battûta Seyahatnâmesi">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">İbn Battûta Seyahatnâmesi - Ebû Abdullah M. İbn Battûta</h3>
+                                    <p class="category-news-desc">Çeviren: A. Sait Aykut. Orta Çağ İslam dünyasının, Anadolu beyliklerinin ve Çin sarayının canlı tanıklığı.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-book"></i>
+                                        <span>Yapı Kredi Yayınları (YKY) &bull; Yaşantı</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Kitap 3 -->
+                        <div class="col-lg-6">
+                            <a href="kitap-onerileri.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="assets/images/afrikali-leo-amin-maalouf-yky.jpg" alt="Afrikalı Leo - Amin Maalouf">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">Afrikalı Leo - Amin Maalouf</h3>
+                                    <p class="category-news-desc">Çeviren: Sevim Raşa. Granada'dan Fez'e, Kahire'den Roma'ya uzanan sürgün ve seyahat romanı.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-book"></i>
+                                        <span>Yapı Kredi Yayınları (YKY) &bull; 45. Baskı</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Kitap 4 -->
+                        <div class="col-lg-6">
+                            <a href="kitap-onerileri.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="assets/images/ibn-fadlan-seyahatnamesi-yeditepe.jpg" alt="İbn Fadlân Seyahatnamesi">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">İbn Fadlân Seyahatnamesi - Prof. Dr. Ramazan Şeşen</h3>
+                                    <p class="category-news-desc">İtil Bulgarları, erken dönem Türk boyları ve kuzey kavimleri üzerine 10. yüzyıldan kalan en eski gözlemler.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-book"></i>
+                                        <span>Yeditepe Yayınevi &bull; 13. Baskı</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Kitap 5 -->
+                        <div class="col-lg-6">
+                            <a href="kitap-onerileri.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="assets/images/arminius-vambery-sahte-dervis-dorlion.jpg" alt="Bir Sahte Dervişin Orta Asya Gezisi">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">Bir Sahte Dervişin Orta Asya Gezisi - Arminius Vambery</h3>
+                                    <p class="category-news-desc">19. yüzyılda derviş kılığına bürünerek Hive ve Buhara hanlıklarını gezen Macar seyyahın hatıraları.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-book"></i>
+                                        <span>Dorlion Yayınları &bull; Anı Dizisi</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Kitap 6 -->
+                        <div class="col-lg-6">
+                            <a href="kitap-onerileri.html" class="category-news-card">
+                                <div class="category-news-thumb">
+                                    <img src="assets/images/hans-dernschwam-seyahat-gunlugu-dorlion.jpg" alt="Hans Dernschwam Seyahat Günlüğü">
+                                </div>
+                                <div class="category-news-content">
+                                    <h3 class="category-news-title">İstanbul ve Anadolu’ya Seyahat Günlüğü (1553-1555)</h3>
+                                    <p class="category-news-desc">Hans Dernschwam. Kanuni Sultan Süleyman devrinde Habsburg elçiliğiyle Anadolu ve payitaht gezisi.</p>
+                                    <div class="category-news-meta">
+                                        <i class="bi bi-book"></i>
+                                        <span>Dorlion Yayınları &bull; Anı Dizisi</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <a href="kitap-onerileri.html" class="btn btn-sm btn-rihle-outline">
+                            Tüm Kitap Önerilerini Keşfet <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ALT BİLGİ (FOOTER) -->
+    <footer class="footer-rihle">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Sol Kolon: Marka Tanıtımı -->
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <img src="assets/images/rihle-icon.svg" alt="Rihle Archive" class="rounded bg-white p-2 shadow-sm" style="height: 56px;">
+                        <div>
+                            <div class="font-serif fw-bold text-white fs-4">Rihle</div>
+                            <div class="brand-font small text-terracotta" style="letter-spacing: 0.25em;">A R C H I V E</div>
+                        </div>
+                    </div>
+                    <p class="small text-white-50">
+                        Geçmişin izine saygı duyan, yerli ve yabancı seyyahların gözünden tarihe, kültüre ve medeniyete ışık tutan bağımsız dijital tarih ve kültür platformu.
+                    </p>
+                    <div class="social-links-top mt-3">
+                        <a href="https://twitter.com" target="_blank" rel="noopener" title="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://spotify.com" target="_blank" rel="noopener" title="Spotify"><i class="bi bi-spotify"></i></a>
+                    </div>
+                </div>
+
+                <!-- 2. Kolon: Gezinti Menüsü -->
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5>Gezinti</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="bi bi-chevron-right small"></i> Ana Sayfa</a></li>
+                        <li><a href="yazilar.html"><i class="bi bi-chevron-right small"></i> Yazılar</a></li>
+                        <li><a href="biyografiler.html"><i class="bi bi-chevron-right small"></i> Biyografiler</a></li>
+                        <li><a href="podcast.html"><i class="bi bi-chevron-right small"></i> Podcast</a></li>
+                        <li><a href="kitap-onerileri.html"><i class="bi bi-chevron-right small"></i> Kitap Önerileri</a></li>
+                        <li><a href="hakkimizda.html"><i class="bi bi-chevron-right small"></i> Hakkımızda</a></li>
+                        <li><a href="iletisim.html"><i class="bi bi-chevron-right small"></i> İletişim</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. Kolon: Kategoriler -->
+                <div class="col-6 col-md-3 col-lg-3">
+                    <h5>Kategoriler</h5>
+                    <ul class="footer-links">
+                        <li><a href="biyografiler.html"><i class="bi bi-chevron-right small"></i> Biyografiler</a></li>
+                        <li><a href="yazilar.html"><i class="bi bi-chevron-right small"></i> Araştırma Yazıları</a></li>
+                        <li><a href="podcast.html"><i class="bi bi-chevron-right small"></i> Sesli Sohbetler (Podcast)</a></li>
+                        <li><a href="kitap-onerileri.html"><i class="bi bi-chevron-right small"></i> Seyahatname Kitaplığı</a></li>
+                        <li><a href="iletisim.html"><i class="bi bi-chevron-right small"></i> Sponsorluk & Reklam</a></li>
+                    </ul>
+                </div>
+
+                <!-- 4. Kolon: İletişim & E-Bülten -->
+                <div class="col-lg-3">
+                    <h5>Bizimle İletişime Geçin</h5>
+                    <p class="small text-white-50 mb-2">
+                        Görüş, katkı ve reklam talepleriniz için:
+                    </p>
+                    <p class="small mb-3">
+                        <a href="mailto:iletisim.rihlearchive@gmail.com" class="text-terracotta fw-bold text-decoration-none">
+                            <i class="bi bi-envelope-fill me-1"></i> iletisim.rihlearchive@gmail.com
+                        </a>
+                    </p>
+                    <form class="newsletter-form mt-2">
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-sm" placeholder="E-posta adresiniz" required>
+                            <button class="btn btn-rihle btn-sm" type="submit">Kayıt Ol</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Alt Telif & Referans Çubuğu -->
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div>
+                    &copy; 2026 <strong>Rihle Archive</strong>. Tüm hakları saklıdır.
+                </div>
+                <div class="d-flex gap-3 mt-2 mt-md-0">
+                    <a href="hakkimizda.html" class="text-white-50">Hakkımızda</a>
+                    <a href="iletisim.html" class="text-white-50">İletişim</a>
+                    <a href="mailto:iletisim.rihlearchive@gmail.com" class="text-white-50">iletisim.rihlearchive@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- HIZLI ARAMA MODALI (CTRL+K) -->
+    <div class="modal fade search-modal" id="searchArchiveModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="search-input-wrap">
+                    <i class="bi bi-search fs-4 text-terracotta"></i>
+                    <input type="text" id="archiveSearchInput" class="search-input-field" placeholder="Arşivde ara: İbn Battûta, Evliya Çelebi, Podcast, Kitaplar..." autocomplete="off">
+                    <span class="badge bg-secondary d-none d-md-inline">ESC</span>
+                </div>
+                <div class="search-results-list" id="archiveSearchResults">
+                    <div class="p-4 text-center text-muted">
+                        <i class="bi bi-compass fs-2 mb-2 d-block text-terracotta"></i>
+                        Aramak istediğiniz seyyah, seyahatname veya podcast başlığını yazın...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BAŞA DÖN BUTONU -->
+    <button type="button" class="btn-back-to-top" id="btnBackToTop" title="Başa Dön">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Özel JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

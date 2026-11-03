@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="description" content="Rihle Archive Hakkında - Misyonumuz, Künyemiz ve Seyahat Mirasına Bakışımız.">
+    <title>Hakkımızda | Rihle Archive</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/rihle-icon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span class="date-badge" id="currentDateDisplay"><i class="bi bi-calendar-event me-1"></i>
+                    Yükleniyor...</span>
+                <span class="d-none d-md-inline text-white-50">|</span>
+                <span class="d-none d-md-inline text-white-50 fst-italic">“Yeryüzünde dolaşın da bakın...”</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <div class="social-links-top">
+                    <a href="https://twitter.com" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+                    <a href="https://spotify.com" target="_blank" rel="noopener"><i class="bi bi-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-rihle sticky-top">
+        <div class="container">
+            <a class="brand-wrapper" href="index.html">
+                <img src="assets/images/rihle-icon.svg" alt="Rihle Archive" class="brand-logo-img">
+                <div class="brand-text-block">
+                    <span class="brand-title">Rihle</span>
+                    <span class="brand-subtitle">A R C H I V E</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarRihleContent">
+                <i class="bi bi-list fs-2 text-primary"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarRihleContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yazilar.html">Yazılar</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarCategoriesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Kategoriler <i class="bi bi-chevron-down ms-1 dropdown-chevron"></i>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarCategoriesDropdown">
+                            <li><a class="dropdown-item py-2" href="biyografiler.html"><i
+                                        class="bi bi-person-lines-fill me-2 text-terracotta"></i> Biyografiler</a></li>
+                            <li><a class="dropdown-item py-2" href="podcast.html"><i
+                                        class="bi bi-mic me-2 text-terracotta"></i> Podcast</a></li>
+                            <li><a class="dropdown-item py-2" href="kitap-onerileri.html"><i
+                                        class="bi bi-book me-2 text-terracotta"></i> Kitap Önerileri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="hakkimizda.html">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button type="button" class="btn-nav-search" data-bs-toggle="modal"
+                        data-bs-target="#searchArchiveModal"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SAYFA BAŞLIĞI -->
+    <header class="py-5 bg-parchment-soft border-bottom">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb small">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Hakkımızda</li>
+                </ol>
+            </nav>
+            <span class="section-eyebrow">Kurumsal Künye ve Vizyon</span>
+            <h1 class="display-5 fw-bold mb-3 font-serif">Rihle Archive Hakkında</h1>
+            <p class="lead text-muted max-w-750">
+                Geçmişin izine saygı duyan, yerli ve yabancı seyyahların gözünden tarihe, kültüre ve medeniyete ışık tutan bağımsız dijital tarih ve kültür platformu.
+            </p>
+        </div>
+    </header>
+
+    <!-- ANA İÇERİK: MANİFESTO VE EKİP -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <!-- 1. Temel Felsefe ve Çerçeve -->
+                    <h2 class="h3 font-serif fw-bold mb-3">Sitenin Temel Felsefesi ve Çerçevesi</h2>
+                    <p class="text-muted lead fs-6">
+                        Bu platform; tarih yazımını sadece kuru kronolojik verilerden ibaret görmeyen, geçmişe ve onun bıraktığı mirasa derin bir saygıyla yaklaşan bağımsız bir dijital arşivdir.
+                    </p>
+                    <div class="about-quote-box my-4">
+                        “Sitenin kalbini, geçmişte bu coğrafyalarda iz bırakmış ya da dışarıdan bu medeniyete pencere açmış <strong>yerli ve yabancı seyyahların/gezginlerin seyahatnameleri, gözlemleri ve anıları</strong> oluşturur.”
+                    </div>
+                    <p class="text-muted">
+                        Amaç, tarihimizi ve dünya medeniyetini tek bir merkezden değil, dışarıdan bakan gözlerin ve içerideki seyyahların objektif ve öznel tanıklıklarıyla harmanlayarak zengin, çok sesli ve derinlikli bir perspektifle sunmaktır. Sosyal medyada hızla tüketilen sığ tarih anlatıları yerine birinci elden seyahatnamelere, haritalara ve belgelere dayanan güvenilir bir arşiv inşa ediyoruz.
+                    </p>
+
+                    <!-- 2. Hedef Kitle Bölümü -->
+                    <h3 class="h4 font-serif fw-bold mt-5 mb-3">Hedef Kitlemiz</h3>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded bg-card h-100 shadow-sm">
+                                <div class="text-terracotta fs-3 mb-2"><i class="bi bi-book-half"></i></div>
+                                <h5 class="h6 fw-bold mb-2">Meraklı Okurlar</h5>
+                                <p class="small text-muted mb-0">Tarihe, seyahatnamelere ve ilmi araştırmalara ilgi duyan genel okur kitlesi.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded bg-card h-100 shadow-sm">
+                                <div class="text-terracotta fs-3 mb-2"><i class="bi bi-mortarboard-fill"></i></div>
+                                <h5 class="h6 fw-bold mb-2">Araştırmacılar & Öğrenciler</h5>
+                                <p class="small text-muted mb-0">Akademik düzeyde olmasa bile nitelikli ve kaynaklı tarih okumaları yapmak isteyenler.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded bg-card h-100 shadow-sm">
+                                <div class="text-terracotta fs-3 mb-2"><i class="bi bi-compass-fill"></i></div>
+                                <h5 class="h6 fw-bold mb-2">Dijital Kaşifler</h5>
+                                <p class="small text-muted mb-0">Seyahat tarihi, Osmanlı ve dünya coğrafyası seyyahları üzerine keşif yapmayı sevenler.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Temel İlkelerimiz -->
+                    <h3 class="h4 font-serif fw-bold mt-5 mb-3">Yayın İlkelerimiz</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded bg-card h-100">
+                                <h5 class="h6 fw-bold text-terracotta"><i class="bi bi-shield-check me-2"></i>Kaynak Güvenilirliği</h5>
+                                <p class="small text-muted mb-0">Her seyyah biyografisi ve rota, birinci elden seyahatnameler ve muteber kaynaklar taranarak hazırlanır.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded bg-card h-100">
+                                <h5 class="h6 fw-bold text-terracotta"><i class="bi bi-eye me-2"></i>Çok Açılı Bakış</h5>
+                                <p class="small text-muted mb-0">Hem Doğu hem Batı seyyahlarının tanıklıklarını bir arada sunarak önyargısız bir hafıza oluştururuz.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded bg-card h-100">
+                                <h5 class="h6 fw-bold text-terracotta"><i class="bi bi-broadcast-pin me-2"></i>Çok Kanallı İçerik</h5>
+                                <p class="small text-muted mb-0">Metinlerin yanı sıra sesli podcastler, etkileşimli haritalar ve kitap önerileriyle zengin bir deneyim sunarız.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded bg-card h-100">
+                                <h5 class="h6 fw-bold text-terracotta"><i class="bi bi-people me-2"></i>Açık Arşiv Kültürü</h5>
+                                <p class="small text-muted mb-0">Tüm araştırmacıların ve okurların katkısına açık, kâr amacı gütmeyen bir dijital miras projesidir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ Kolon: Rakamlar & İletişim Çağrısı -->
+                <div class="col-lg-4">
+                    <div class="p-4 rounded border bg-card mb-4">
+                        <h4 class="h5 font-serif fw-bold mb-3 border-bottom pb-2">Arşiv Rakamları</h4>
+                        <div class="d-flex justify-content-between py-2 border-bottom">
+                            <span class="text-muted small">Seyyah Dosyaları:</span>
+                            <span class="fw-bold text-terracotta">350+ Eser</span>
+                        </div>
+                        <div class="d-flex justify-content-between py-2 border-bottom">
+                            <span class="text-muted small">Podcast Bölümleri:</span>
+                            <span class="fw-bold text-terracotta">120+ Kayıt</span>
+                        </div>
+                        <div class="d-flex justify-content-between py-2 border-bottom">
+                            <span class="text-muted small">Tarihi Haritalar:</span>
+                            <span class="fw-bold text-terracotta">1.200+ Pafta</span>
+                        </div>
+                        <div class="d-flex justify-content-between py-2">
+                            <span class="text-muted small">Gönüllü Yazar / Katkı:</span>
+                            <span class="fw-bold text-terracotta">45 Araştırmacı</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded bg-parchment-soft border text-center">
+                        <img src="assets/images/rihle-icon.svg" alt="Logo" class="rounded mb-3 shadow-sm bg-white p-2"
+                            style="height: 84px;">
+                        <h5 class="fw-bold font-serif mb-1">Rihle Archive Ekibi</h5>
+                        <p class="text-muted small mb-3">Tarih öğretmenleri, akademisyenler ve genç araştırmacılar
+                            topluluğu.</p>
+                        <a href="iletisim.html" class="btn btn-rihle btn-sm w-100">
+                            Ekibe Katılın / İletişim
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-rihle">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <span class="font-serif fw-bold text-white fs-4">Rihle Archive</span>
+                    <p class="small text-white-50 mt-2">Geçmişin izine saygı duyan, yerli ve yabancı seyyahların gözünden tarihe, kültüre ve medeniyete ışık tutan bağımsız dijital tarih ve kültür platformu.</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <h5>Gezinti</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="yazilar.html">Yazılar</a></li>
+                        <li><a href="biyografiler.html">Biyografiler</a></li>
+                        <li><a href="podcast.html">Podcast</a></li>
+                        <li><a href="kitap-onerileri.html">Kitap Önerileri</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 col-lg-5">
+                    <h5>İletişim & Katkı</h5>
+                    <p class="small text-white-50">Arşive katkıda bulunmak ve yazılarınızı iletmek için <a
+                            href="mailto:iletisim.rihlearchive@gmail.com"
+                            class="text-white-50 text-decoration-underline">iletisim.rihlearchive@gmail.com</a> adresinden bize
+                        ulaşabilirsiniz.</p>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex justify-content-between align-items-center">
+                <div>&copy; 2026 Rihle Archive. Tüm hakları saklıdır.</div>
+                <a href="mailto:iletisim.rihlearchive@gmail.com" class="text-white-50">iletisim.rihlearchive@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ARAMA MODALI -->
+    <div class="modal fade search-modal" id="searchArchiveModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="search-input-wrap">
+                    <i class="bi bi-search fs-4 text-terracotta"></i>
+                    <input type="text" id="archiveSearchInput" class="search-input-field" placeholder="Arşivde ara...">
+                </div>
+                <div class="search-results-list" id="archiveSearchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

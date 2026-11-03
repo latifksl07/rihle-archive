@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="description" content="Rihle Podcast - Kadim Seyahatlerin, Kervan Yollarının ve Tarih Sohbetlerinin Sesli Kayıtları.">
+    <title>Podcast Yayınları | Rihle Archive</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/images/rihle-icon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span class="date-badge" id="currentDateDisplay"><i class="bi bi-calendar-event me-1"></i> Yükleniyor...</span>
+                <span class="d-none d-md-inline text-white-50">|</span>
+                <span class="d-none d-md-inline text-white-50 fst-italic">“Yeryüzünde dolaşın da bakın...”</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <div class="social-links-top">
+                    <a href="https://twitter.com" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+                    <a href="https://spotify.com" target="_blank" rel="noopener"><i class="bi bi-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-rihle sticky-top">
+        <div class="container">
+            <a class="brand-wrapper" href="index.html">
+                <img src="assets/images/rihle-icon.svg" alt="Rihle Archive" class="brand-logo-img">
+                <div class="brand-text-block">
+                    <span class="brand-title">Rihle</span>
+                    <span class="brand-subtitle">A R C H I V E</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRihleContent">
+                <i class="bi bi-list fs-2 text-primary"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarRihleContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yazilar.html">Yazılar</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarCategoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Kategoriler <i class="bi bi-chevron-down ms-1 dropdown-chevron"></i>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarCategoriesDropdown">
+                            <li><a class="dropdown-item py-2" href="biyografiler.html"><i class="bi bi-person-lines-fill me-2 text-terracotta"></i> Biyografiler</a></li>
+                            <li><a class="dropdown-item py-2 active" href="podcast.html"><i class="bi bi-mic me-2 text-terracotta"></i> Podcast</a></li>
+                            <li><a class="dropdown-item py-2" href="kitap-onerileri.html"><i class="bi bi-book me-2 text-terracotta"></i> Kitap Önerileri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button type="button" class="btn-nav-search" data-bs-toggle="modal" data-bs-target="#searchArchiveModal"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SAYFA BAŞLIĞI -->
+    <header class="py-5 bg-parchment-soft border-bottom">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb small">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Podcast</li>
+                </ol>
+            </nav>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="section-eyebrow">Sesli Kayıtlar & Sohbetler</span>
+                    <h1 class="display-5 fw-bold mb-2 font-serif">Rihle Podcast Odası</h1>
+                    <p class="lead text-muted mb-0 font-serif fst-italic">
+                        Seyahatlerin, keşiflerin ve hatıraların sesli arşivi.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+                        <a href="https://spotify.com" target="_blank" rel="noopener" class="btn btn-dark btn-sm"><i class="bi bi-spotify text-success me-1"></i> Spotify</a>
+                        <a href="https://apple.com" target="_blank" rel="noopener" class="btn btn-dark btn-sm"><i class="bi bi-apple me-1"></i> Apple Podcasts</a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" class="btn btn-dark btn-sm"><i class="bi bi-youtube text-danger me-1"></i> YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PODCAST OYNATICI VE LİSTE -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Sol: Ana Oynatıcı -->
+                <div class="col-lg-5">
+                    <div class="sticky-top" style="top: 100px;">
+                        <div class="podcast-featured-player">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge bg-danger text-uppercase px-2 py-1">Seçili Bölüm</span>
+                                <span class="text-white-50 small">Rihle Podcast Serisi</span>
+                            </div>
+                            <div class="text-center mb-3">
+                                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=400&q=80" alt="Podcast Kapağı" id="playerCover" class="podcast-cover-art mx-auto d-block">
+                                <h4 class="text-white fw-bold mt-3 mb-1" id="playerTitle">İbn Battûta'nın 30 Yıllık Yolculuğu</h4>
+                                <p class="text-white-50 small mb-0" id="playerGuest">Prof. Dr. Ahmet Şimşirgil ile</p>
+                            </div>
+
+                            <div class="player-controls-wrap">
+                                <div class="d-flex justify-content-between text-white-50 small mb-2">
+                                    <span id="playerCurrentTime">13:24</span>
+                                    <span>42:00</span>
+                                </div>
+                                <div class="audio-progress-bar mb-3" id="playerProgressBar">
+                                    <div class="audio-progress-fill" id="playerProgressFill"></div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-link text-white-50 p-0"><i class="bi bi-skip-backward-fill fs-5"></i></button>
+                                    <button type="button" class="btn-play-master" id="masterPlayBtn">
+                                        <i class="bi bi-play-fill" id="masterPlayIcon"></i>
+                                    </button>
+                                    <button class="btn btn-link text-white-50 p-0"><i class="bi bi-skip-forward-fill fs-5"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ: Bölümler -->
+                <div class="col-lg-7">
+                    <h3 class="h4 font-serif fw-bold mb-3">Tüm Bölümler ve Notlar</h3>
+                    <div class="podcast-list-group">
+                        <div class="podcast-item is-active" data-id="1">
+                            <span class="podcast-num">#12</span>
+                            <div class="flex-grow-1">
+                                <h4 class="podcast-info-title">İbn Battûta'nın 30 Yıllık Yolculuğu: Tanca'dan Çin'e</h4>
+                                <p class="small text-muted mb-1">Tanca'dan tek başına çıkan genç bir fakihin 120 bin kilometrelik dünya serüvenine dönüşen yolculuğu.</p>
+                                <span class="podcast-duration"><i class="bi bi-mic me-1"></i> Prof. Dr. Ahmet Şimşirgil &bull; 42 dk &bull; 24 Ekim 2026</span>
+                            </div>
+                            <i class="bi bi-play-circle fs-3 text-terracotta"></i>
+                        </div>
+
+                        <div class="podcast-item" data-id="2">
+                            <span class="podcast-num">#11</span>
+                            <div class="flex-grow-1">
+                                <h4 class="podcast-info-title">Evliyâ Çelebi'nin Gözünden 17. Yüzyıl İstanbul'u</h4>
+                                <p class="small text-muted mb-1">Kahvehaneler, esnaf alayları, boza dükkanları ve dönemin canlı sokak hayatı.</p>
+                                <span class="podcast-duration"><i class="bi bi-mic me-1"></i> Dr. Mehmet Kalpaklı &bull; 38 dk &bull; 17 Ekim 2026</span>
+                            </div>
+                            <i class="bi bi-play-circle fs-3 text-terracotta"></i>
+                        </div>
+
+                        <div class="podcast-item" data-id="3">
+                            <span class="podcast-num">#10</span>
+                            <div class="flex-grow-1">
+                                <h4 class="podcast-info-title">Kitâb-ı Bahriye: Pîrî Reis'in Akdeniz Sırları</h4>
+                                <p class="small text-muted mb-1">Akdeniz’in fırtınalı koyları, liman kaleleri ve 1513 Dünya Haritasının perde arkası.</p>
+                                <span class="podcast-duration"><i class="bi bi-mic me-1"></i> Prof. Dr. İdris Bostan &bull; 45 dk &bull; 10 Ekim 2026</span>
+                            </div>
+                            <i class="bi bi-play-circle fs-3 text-terracotta"></i>
+                        </div>
+
+                        <div class="podcast-item" data-id="4">
+                            <span class="podcast-num">#09</span>
+                            <div class="flex-grow-1">
+                                <h4 class="podcast-info-title">İpek Yolu Kervanlarının Bilinmeyen Günlükleri</h4>
+                                <p class="small text-muted mb-1">Kervansaray teşkilatı, tüccarların gece nöbetleri ve çölleri aşan baharat rotaları.</p>
+                                <span class="podcast-duration"><i class="bi bi-mic me-1"></i> Arş. Gör. Zeynep Turan &bull; 34 dk &bull; 03 Ekim 2026</span>
+                            </div>
+                            <i class="bi bi-play-circle fs-3 text-terracotta"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-rihle">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <span class="font-serif fw-bold text-white fs-4">Rihle Archive</span>
+                    <p class="small text-white-50 mt-2">Geçmişin izine saygı duyan, yerli ve yabancı seyyahların gözünden tarihe, kültüre ve medeniyete ışık tutan bağımsız dijital tarih ve kültür platformu.</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <h5>Gezinti</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="yazilar.html">Yazılar</a></li>
+                        <li><a href="biyografiler.html">Biyografiler</a></li>
+                        <li><a href="podcast.html">Podcast</a></li>
+                        <li><a href="kitap-onerileri.html">Kitap Önerileri</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 col-lg-5">
+                    <h5>Podcast Platformları</h5>
+                    <p class="small text-white-50">Spotify, Apple Podcasts, YouTube Music ve Google Podcasts üzerinden abone olabilirsiniz.</p>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex justify-content-between align-items-center">
+                <div>&copy; 2026 Rihle Archive. Tüm hakları saklıdır.</div>
+                <a href="mailto:iletisim.rihlearchive@gmail.com" class="text-white-50">iletisim.rihlearchive@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ARAMA MODALI -->
+    <div class="modal fade search-modal" id="searchArchiveModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="search-input-wrap">
+                    <i class="bi bi-search fs-4 text-terracotta"></i>
+                    <input type="text" id="archiveSearchInput" class="search-input-field" placeholder="Arşivde ara...">
+                </div>
+                <div class="search-results-list" id="archiveSearchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

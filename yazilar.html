@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="description" content="Rihle Archive - Tarih, Seyahatname, Coğrafya ve Medeniyet Yazıları.">
+    <title>Arşivden Yazılar | Rihle Archive</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/images/rihle-icon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span class="date-badge" id="currentDateDisplay"><i class="bi bi-calendar-event me-1"></i> Yükleniyor...</span>
+                <span class="d-none d-md-inline text-white-50">|</span>
+                <span class="d-none d-md-inline text-white-50 fst-italic">“Yeryüzünde dolaşın da bakın...”</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <div class="social-links-top">
+                    <a href="https://twitter.com" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+                    <a href="https://spotify.com" target="_blank" rel="noopener"><i class="bi bi-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-rihle sticky-top">
+        <div class="container">
+            <a class="brand-wrapper" href="index.html">
+                <img src="assets/images/rihle-icon.svg" alt="Rihle Archive" class="brand-logo-img">
+                <div class="brand-text-block">
+                    <span class="brand-title">Rihle</span>
+                    <span class="brand-subtitle">A R C H I V E</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRihleContent">
+                <i class="bi bi-list fs-2 text-primary"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarRihleContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="yazilar.html">Yazılar</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarCategoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Kategoriler <i class="bi bi-chevron-down ms-1 dropdown-chevron"></i>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarCategoriesDropdown">
+                            <li><a class="dropdown-item py-2" href="biyografiler.html"><i class="bi bi-person-lines-fill me-2 text-terracotta"></i> Biyografiler</a></li>
+                            <li><a class="dropdown-item py-2" href="podcast.html"><i class="bi bi-mic me-2 text-terracotta"></i> Podcast</a></li>
+                            <li><a class="dropdown-item py-2" href="kitap-onerileri.html"><i class="bi bi-book me-2 text-terracotta"></i> Kitap Önerileri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button type="button" class="btn-nav-search" data-bs-toggle="modal" data-bs-target="#searchArchiveModal"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SAYFA BAŞLIĞI -->
+    <header class="py-5 bg-parchment-soft border-bottom">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb small">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Yazılar</li>
+                </ol>
+            </nav>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="section-eyebrow">Araştırma & Seyahatname İncelemeleri</span>
+                    <h1 class="display-5 fw-bold mb-3">Arşivden Yazılar</h1>
+                    <p class="lead text-muted">
+                        Kadim seyahatnameler, liman şehirleri, kervan yolları ve tarihi haritalar üzerine hazırlanan özgün araştırma ve deneme koleksiyonu.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <span class="badge bg-secondary p-2">Toplam 12 Özel Dosya</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- YAZILAR LİSTESİ -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Yazı 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="İbn Battuta" class="yazi-img">
+                            <span class="yazi-category-badge">Kültür & Medeniyet</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 6 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">İbn Battûta'nın Anadolu Notları: Ahîler ve Misafirperverlik</h3>
+                            <p class="yazi-excerpt">14. yüzyıl Anadolu beylikleri coğrafyasına adım atan seyyahın, Ahî ocaklarındaki sofralar ve gençlerin dayanışmasına dair tuttuğu eşsiz notlar.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Dr. Selim Yılmaz</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-1">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yazı 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="assets/images/evliya-celebi.jpg" alt="Evliya Çelebi" class="yazi-img">
+                            <span class="yazi-category-badge">Osmanlı Tarihi</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 8 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">Evliyâ Çelebi'nin Rüyası ve İstanbul Surları Dışındaki Hayat</h3>
+                            <p class="yazi-excerpt">Ahi Çelebi Camii'ndeki meşhur rüya ile başlayan yolculuğun ilk menzili: Payitahtın bostanları, kahvehaneleri ve Boğaziçi yalıları.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Ahmet Karataş</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-2">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yazı 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?auto=format&fit=crop&w=600&q=80" alt="Piri Reis" class="yazi-img">
+                            <span class="yazi-category-badge">Denizcilik</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 7 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">Akdeniz'in Fırtınalı Sırları: Kitâb-ı Bahriye Nasıl Yazıldı?</h3>
+                            <p class="yazi-excerpt">Pîrî Reis'in Akdeniz'in her koyunu, rüzgâr yönünü, su kuyularını ve kayalıklarını bir pusula hassasiyetiyle kaydettiği eseri.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Doç. Dr. Murat K.</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-3">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yazı 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1508672019048-805b876b67e2?auto=format&fit=crop&w=600&q=80" alt="İpek Yolu" class="yazi-img">
+                            <span class="yazi-category-badge">Tarih & Coğrafya</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 5 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">İpek Yolu Kervanlarının Günlük Hayatı: Konaklama ve Güvenlik</h3>
+                            <p class="yazi-excerpt">Buhara'dan Tebriz'e uzanan kervansaraylar ağında tüccarların bir günü nasıl geçerdi? Gece nöbetleri ve ücretsiz çorba geleneği.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Zeynep Turan</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-4">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yazı 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=600&q=80" alt="İbn Fadlan" class="yazi-img">
+                            <span class="yazi-category-badge">Antropoloji</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 9 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">İbn Fadlân'ın Kuzey Seferi: Volga Kıyısında Viking Cenazesi</h3>
+                            <p class="yazi-excerpt">Abbasi elçisinin 921 yılında İtil boylarında şahit olduğu gemi yakma merasimi ve Rus-Viking kavimlerine dair ilk görgü tanıklığı.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Kerem Aksoy</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-5">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yazı 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=600&q=80" alt="Katip Çelebi" class="yazi-img">
+                            <span class="yazi-category-badge">Bilim Tarihi</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 6 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">Kâtib Çelebi ve Cihannümâ: Modern Coğrafyanın Doğuşu</h3>
+                            <p class="yazi-excerpt">Batı dillerindeki Mercator ve Ortelius atlaslarını tercüme ederek Doğu coğrafyacılığıyla meczeden Hacı Halife'nin bilim devrimi.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Prof. Dr. Nuri Ç.</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-6">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yazı 7 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="Endülüs" class="yazi-img">
+                            <span class="yazi-category-badge">Düşünce Tarihi</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 7 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">Endülüs'ten Semerkant'a: İlim Seyahatlerinin (Rihle) Felsefesi</h3>
+                            <p class="yazi-excerpt">Klasik İslam dünyasında 'Rihle fi talebi'l-ilm' geleneği; bilginin peşinde binlerce kilometre yürüyen âlimlerin yol ahlakı.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Dr. Selim Yılmaz</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-7">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yazı 8 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=80" alt="Marco Polo" class="yazi-img">
+                            <span class="yazi-category-badge">Uzak Doğu</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 8 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">Marco Polo Hanbalık'ta: Kubilay Han'ın Sarayı ve Kağıt Para</h3>
+                            <p class="yazi-excerpt">Venedikli tüccarın Çin sarayında gördüğü maden kömürü, posta teşkilatı ve kağıt paraya dair Avrupa'yı şaşırtan hatıratı.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Ahmet Karataş</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-8">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yazı 9 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="Hac Kervanı" class="yazi-img">
+                            <span class="yazi-category-badge">Kutsal Coğrafya</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 6 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">Kâbe Yolları: Hac Kervanlarının Rotaları ve Surre Alayları</h3>
+                            <p class="yazi-excerpt">Üsküdar'dan dualarla uğurlanan develer, Şam ve Kahire menzilleri üzerinden çölü aşan Hac kafilesinin asırlık hikâyesi.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Kerem Aksoy</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-9">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yazı 10 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=600&q=80" alt="Matrakçı Nasuh" class="yazi-img">
+                            <span class="yazi-category-badge">Sanat & Harita</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 5 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">Matrakçı Nasuh'un Minyatürlerinde 16. Yüzyıl Şehirleri</h3>
+                            <p class="yazi-excerpt">Irakeyn Seferi menzilnamelerinde Diyarbakır, Tebriz, Halep ve Bağdat'ı kuşbakışı resmeden dâhi nakkaşın topografik mirası.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Zeynep Turan</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-10">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yazı 11 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&fit=crop&w=600&q=80" alt="Seydi Ali Reis" class="yazi-img">
+                            <span class="yazi-category-badge">Denizcilik</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 8 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">Seydi Ali Reis ve Mir'âtü'l-Memâlik: Okyanus Fırtınaları</h3>
+                            <p class="yazi-excerpt">Hint Okyanusu'nda fırtınaya yakalanıp gemilerini kaybeden Osmanlı kaptanının Gujarat'tan Semerkant ve payitahta dönüş macerası.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Doç. Dr. Murat K.</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-11">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yazı 12 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="yazi-card">
+                        <div class="yazi-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=600&q=80" alt="Liman Şehirleri" class="yazi-img">
+                            <span class="yazi-category-badge">Şehir Tarihi</span>
+                            <span class="yazi-read-time"><i class="bi bi-clock me-1"></i> 6 dk</span>
+                        </div>
+                        <div class="yazi-body">
+                            <h3 class="yazi-title">Kadim İskenderiye Feneri'nden Boğaz Kalelerine: Liman Şehirleri</h3>
+                            <p class="yazi-excerpt">Doğu Akdeniz'in ticaret limanlarında tüccar kalyonları, gümrük hanları ve seyyahların kaydettiği sahil hayatı.</p>
+                            <div class="yazi-meta-footer">
+                                <span><i class="bi bi-person me-1"></i> Prof. Dr. Nuri Ç.</span>
+                                <button type="button" class="btn btn-sm btn-rihle btn-yazi-detail" data-id="yazi-12">Oku &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- YAZI DETAY MODALI -->
+    <div class="modal fade" id="articleDetailModal" tabindex="-1" aria-labelledby="modalArticleTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-bottom">
+                    <div>
+                        <span class="badge bg-danger mb-1" id="modalArticleCategory">Kategori</span>
+                        <h4 class="modal-title font-serif" id="modalArticleTitle">Yazı Başlığı</h4>
+                        <div class="small text-muted mt-1">
+                            <span id="modalArticleAuthor">-</span> &bull; <span id="modalArticleDate">-</span> &bull; <span id="modalArticleReadTime">-</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <img src="" id="modalArticleImg" alt="Kapak" class="img-fluid rounded mb-4 w-100" style="max-height: 320px; object-fit: cover;">
+                    <div class="lead fs-6 text-muted lh-lg" id="modalArticleContent">
+                        İçerik yükleniyor...
+                    </div>
+                </div>
+                <div class="modal-footer border-top d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Kapat</button>
+                    <a href="yazi-detay.html" class="btn btn-rihle btn-sm" id="modalReadFullArticleBtn">
+                        Yazının Tamamını Oku <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HIZLI ARAMA MODALI -->
+    <div class="modal fade search-modal" id="searchArchiveModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="search-input-wrap">
+                    <i class="bi bi-search fs-4 text-terracotta"></i>
+                    <input type="text" id="archiveSearchInput" class="search-input-field" placeholder="Arşivde ara...">
+                </div>
+                <div class="search-results-list" id="archiveSearchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

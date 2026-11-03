@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="description" content="İbn Battûta'nın Anadolu Notları: Ahîler ve Misafirperverlik - Rihle Archive">
+    <title>İbn Battûta'nın Anadolu Notları: Ahîler ve Misafirperverlik | Rihle Archive</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/images/rihle-icon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span class="date-badge" id="currentDateDisplay"><i class="bi bi-calendar-event me-1"></i> Yükleniyor...</span>
+                <span class="d-none d-md-inline text-white-50">|</span>
+                <span class="d-none d-md-inline text-white-50 fst-italic">“Yeryüzünde dolaşın da bakın...”</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <div class="social-links-top">
+                    <a href="https://twitter.com" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+                    <a href="https://spotify.com" target="_blank" rel="noopener"><i class="bi bi-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR (Sabit ve Opak - Hover ile Açılan Menü) -->
+    <nav class="navbar navbar-expand-lg navbar-rihle sticky-top">
+        <div class="container">
+            <a class="brand-wrapper" href="index.html">
+                <img src="assets/images/rihle-icon.svg" alt="Rihle Archive" class="brand-logo-img">
+                <div class="brand-text-block">
+                    <span class="brand-title">Rihle</span>
+                    <span class="brand-subtitle">A R C H I V E</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRihleContent">
+                <i class="bi bi-list fs-2 text-primary"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarRihleContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="yazilar.html">Yazılar</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarCategoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Kategoriler <i class="bi bi-chevron-down ms-1 dropdown-chevron"></i>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarCategoriesDropdown">
+                            <li><a class="dropdown-item py-2" href="biyografiler.html"><i class="bi bi-person-lines-fill me-2 text-terracotta"></i> Biyografiler</a></li>
+                            <li><a class="dropdown-item py-2" href="podcast.html"><i class="bi bi-mic me-2 text-terracotta"></i> Podcast</a></li>
+                            <li><a class="dropdown-item py-2" href="kitap-onerileri.html"><i class="bi bi-book me-2 text-terracotta"></i> Kitap Önerileri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button type="button" class="btn-nav-search" data-bs-toggle="modal" data-bs-target="#searchArchiveModal"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- TEKİL YAZI BAŞLIĞI VE BREADCRUMB -->
+    <article class="py-5">
+        <div class="container" style="max-width: 860px;">
+            <!-- Ekmek Kırıntısı (Breadcrumb) - Doğrudan ve Ara Katmansız -->
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb small">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item"><a href="yazilar.html">Yazılar</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">İbn Battûta'nın Anadolu Notları</li>
+                </ol>
+            </nav>
+
+            <span class="badge bg-danger mb-2 px-3 py-2 text-uppercase fw-semibold" style="letter-spacing: 1px;">Kültür & Medeniyet</span>
+            
+            <h1 class="display-5 font-serif fw-bold mb-3" style="color: var(--color-primary); line-height: 1.25;">
+                İbn Battûta'nın Anadolu Notları: Ahîler ve Misafirperverlik
+            </h1>
+
+            <!-- Yazar & Meta Bilgileri -->
+            <div class="d-flex flex-wrap align-items-center gap-3 text-muted small pb-4 mb-4 border-bottom">
+                <span><i class="bi bi-person-circle me-1 text-terracotta"></i> <strong>Dr. Selim Yılmaz</strong></span>
+                <span>&bull;</span>
+                <span><i class="bi bi-calendar3 me-1 text-terracotta"></i> 14 Ekim 2026</span>
+                <span>&bull;</span>
+                <span><i class="bi bi-clock me-1 text-terracotta"></i> 6 dakika okuma</span>
+                <span>&bull;</span>
+                <span><i class="bi bi-chat-text me-1 text-terracotta"></i> <a href="#comments" class="text-muted text-decoration-none">3 Yorum</a></span>
+            </div>
+
+            <!-- Öne Çıkan Görsel -->
+            <div class="mb-5">
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80" alt="İbn Battuta Anadolu" class="img-fluid rounded-4 shadow-sm w-100" style="max-height: 460px; object-fit: cover;">
+                <figcaption class="text-center text-muted small mt-2 fst-italic">14. yüzyıl Anadolu beylikleri kervan yolu ve misafirperverlik tasviri.</figcaption>
+            </div>
+
+            <!-- Makale Metni -->
+            <div class="article-content fs-5 lh-lg" style="color: #382e28;">
+                <p class="lead fw-semibold text-muted mb-4">
+                    1330'lu yıllarda Anadolu topraklarına ayak basan Tancalı büyük seyyah İbn Battûta, bu coğrafyada karşılaştığı teşkilatlanmaya ve halkın misafirperverliğine hayran kalmıştır. Seyahatnamesinin en canlı sayfaları, beylikler döneminin Ahî ocaklarında geçen günleri tasvir eder.
+                </p>
+
+                <p>
+                    İbn Battûta Alanya'dan Anadolu'ya girdiğinde, henüz Osmanlı Devleti'nin kuruluş sancılarının yaşandığı, Selçuklu mirasının beylikler arasında paylaşıldığı bir dönemdi. Şehirlere adım attığında seyyahı ilk karşılayanlar, dönemin sivil toplum kuruluşu ve esnaf dayanışması olan Ahî gençleriydi. Seyyah, gençlerin birbirleriyle misafir ağırlama yarışına girdiğini, yabancı bir yolcunun atının dizgininden tutarak kendi tekkelerine davet etmek için nasıl tatlı bir rekabet sergilediklerini hayretle kaydeder.
+                </p>
+
+                <blockquote class="p-4 my-4 bg-parchment-soft border-start border-4 border-danger rounded-3 font-serif fst-italic fs-5">
+                    “Dünyada Ahîler kadar gariplere şefkat gösteren, yolcuları doyurmak için birbiriyle yarışan, haksızlığa karşı duran bir zümre görmedim. Kazançlarını bir havuzda toplar, akşam olunca tekkeye gelen fakir fukara ve yolcularla birlikte yerlerdi.”
+                </blockquote>
+
+                <p>
+                    Seyyahın notlarında özellikle Denizli (Lâdik), Konya, Niğde, Aksaray, Kayseri, Sivas ve Erzurum menzilleri detaylıca aktarılır. Her menzilde kurulan zengin sofralar, meyve ikramları, semâ merasimleri ve fütüvvet ahlakının incelikleri, Anadolu'nun sadece askeri değil manevi olarak da nasıl imar edildiğini günümüze taşır.
+                </p>
+            </div>
+
+            <!-- YAZI ALTI PAYLAŞIM VE ETİKETLER -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-4 my-5 border-top border-bottom">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="small fw-bold text-muted">Etiketler:</span>
+                    <span class="badge bg-light text-dark border">İbn Battuta</span>
+                    <span class="badge bg-light text-dark border">Anadolu Tarihi</span>
+                    <span class="badge bg-light text-dark border">Ahîlik</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-sm-0">
+                    <span class="small fw-bold text-muted">Paylaş:</span>
+                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- ===================================================================
+                 STANDART YORUMLAR VE YORUM FORMU (comments_template Karşılığı)
+                 =================================================================== -->
+            <section class="comments-area" id="comments">
+                <h3 class="comments-title">
+                    <i class="bi bi-chat-dots text-terracotta me-2"></i> Okur Yorumları (3)
+                </h3>
+
+                <!-- Mevcut Yorumlar Listesi -->
+                <ul class="comment-list">
+                    <!-- Yorum 1 -->
+                    <li class="comment-item">
+                        <div class="d-flex gap-3">
+                            <div class="comment-avatar">M</div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="comment-author-name">Murat Özkan</h5>
+                                    <span class="comment-date"><i class="bi bi-clock me-1"></i> 18 Ekim 2026, 14:30</span>
+                                </div>
+                                <p class="comment-text">
+                                    İbn Battûta'nın özellikle Denizli ve Lâdik seyahatindeki ahî gençleriyle olan hatıraları muhteşemdir. Anadolu irfanını ve misafirperverliğini bu kadar duru aktaran başka bir seyahatname az bulunur. Kaleminize sağlık!
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Yorum 2 -->
+                    <li class="comment-item">
+                        <div class="d-flex gap-3">
+                            <div class="comment-avatar">Z</div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="comment-author-name">Zeynep Kaya</h5>
+                                    <span class="comment-date"><i class="bi bi-clock me-1"></i> 20 Ekim 2026, 09:15</span>
+                                </div>
+                                <p class="comment-text">
+                                    Ahî ocaklarının akşam sofraları ve gençlerin fütüvvet ahlakı günümüz esnafına da örnek olmalı. Çok akıcı ve öğretici bir yazı olmuş.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Yorum 3 -->
+                    <li class="comment-item">
+                        <div class="d-flex gap-3">
+                            <div class="comment-avatar">A</div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="comment-author-name">Ahmet Can</h5>
+                                    <span class="comment-date"><i class="bi bi-clock me-1"></i> 25 Ekim 2026, 21:40</span>
+                                </div>
+                                <p class="comment-text">
+                                    Seyahatnamenin A. Sait Aykut çevirisini de okumuştum, buradaki özet dosya araştırmacılar için çok faydalı olmuş. Teşekkürler Rihle ekibi.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Yorum Bırakma Formu (WordPress Standart Yorum Formu Tasarımı) -->
+                <div class="comment-form-box">
+                    <h4 class="comment-reply-title">Bir Yorum Bırakın</h4>
+                    <p class="comment-notes">E-posta adresiniz yayımlanmayacaktır. Gerekli alanlar * ile işaretlenmiştir.</p>
+
+                    <form id="commentform" class="comment-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="author" class="form-label small fw-bold">Adınız Soyadınız *</label>
+                                <input type="text" class="form-control" id="author" name="author" placeholder="Örn: Evliya Çelebi" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label small fw-bold">E-Posta Adresiniz *</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="ornek@domain.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="comment" class="form-label small fw-bold">Yorumunuz *</label>
+                                <textarea class="form-control" id="comment" name="comment" rows="5" placeholder="Düşüncelerinizi buraya yazabilirsiniz..." required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="wp-comment-cookies-consent" name="wp-comment-cookies-consent">
+                                    <label class="form-check-label small text-muted" for="wp-comment-cookies-consent">
+                                        Bir dahaki sefere yorum yaptığımda kullanılmak üzere adımı ve e-posta adresimi bu tarayıcıya kaydet.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-rihle px-4 py-2">
+                                    <i class="bi bi-chat-left-text-fill me-1"></i> Yorumu Gönder
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="footer-rihle">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <span class="font-serif fw-bold text-white fs-4">Rihle Archive</span>
+                    <p class="small text-white-50 mt-2">Geçmişin izine saygı duyan, yerli ve yabancı seyyahların gözünden tarihe, kültüre ve medeniyete ışık tutan bağımsız dijital tarih ve kültür platformu.</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <h5>Gezinti</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="yazilar.html">Yazılar</a></li>
+                        <li><a href="biyografiler.html">Biyografiler</a></li>
+                        <li><a href="podcast.html">Podcast</a></li>
+                        <li><a href="kitap-onerileri.html">Kitap Önerileri</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 col-lg-5">
+                    <h5>İletişim</h5>
+                    <p class="small text-white-50 mb-1">Görüş ve önerileriniz için:</p>
+                    <a href="mailto:iletisim.rihlearchive@gmail.com" class="text-terracotta fw-bold">iletisim.rihlearchive@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex justify-content-between align-items-center mt-4 pt-3 border-top border-secondary">
+                <div>&copy; 2026 Rihle Archive. Tüm hakları saklıdır.</div>
+                <a href="mailto:iletisim.rihlearchive@gmail.com" class="text-white-50">iletisim.rihlearchive@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ARAMA MODALI -->
+    <div class="modal fade search-modal" id="searchArchiveModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="search-input-wrap">
+                    <i class="bi bi-search fs-4 text-terracotta"></i>
+                    <input type="text" id="archiveSearchInput" class="search-input-field" placeholder="Arşivde ara...">
+                </div>
+                <div class="search-results-list" id="archiveSearchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
